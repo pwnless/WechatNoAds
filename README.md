@@ -1,0 +1,2 @@
+# WechatNoAds
+Fuck WeChat ads!
