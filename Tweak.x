@@ -31,6 +31,10 @@
 -(void) setViewModel:(id)x {}
 %end
 
+%hook BTCanvasItemCellViewModel
+-(double)viewHeight{return 0;}
+%end
+
 %hook __NSURLSessionLocal
 - (NSURLSessionDataTask *)dataTaskWithRequest:(NSURLRequest  *)request
                             completionHandler:(void (^)(NSData *data,
@@ -47,4 +51,34 @@
 	else
 		return %orig;
 };
+%end
+
+%hook WSHotListContainerView
+-(bool) isSearchRecommendStyle {return NO;}
+%end
+
+%hook WAAppTask
+-(void) addSystemCoverViewIfNeeded {}
+-(void) splashAD_createSplashADWindow {}
+-(void) mainThread_splashAD_handleSplashADContainerIsPreload:(bool)x {}
+%end
+
+%hook WAAppTaskSplashADConfig
+-(bool) canShowSplashADWindow {return NO;}
+-(bool) launchShow {return NO;}
+%end
+
+%hook WCAdvertiseLiteAppUtils
++(void) checkAdLiteAppPackageUpdate:(id)x {}
+%end
+
+%hook WCAdvertiseLogicMgr
+-(void)updateAdvertiseDataList:(id)x:(int)y {}
+-(void)pdateAdvertiseDataItemDetail:(id)x:(int)y {}
+-(void)updateDataItemDetail:(id)x:(int)y:(id)z {}
+-(bool) requestForSnsADObjectOpRequest:(id)x {return NO;}
+-(void) requestForSnsADObjectDetailRequest:(id)a:(int)b:(int)c:(id)d:(id)e:(int)f {}
+-(void) tryToPreloadWeAppForAdResource:(id)x {}
+-(void) tryToPreloadWeAppForAdCanvas:(id)x {}
+-(void) tryToPreloadWeApp:(id)x:(bool)y {}
 %end
