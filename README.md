@@ -12,6 +12,7 @@ The first tweak that removes almost all ads from wechat (except ads inside javas
 * Remove all ads inside subscription channel articles
 * Remove all ads in subscription page
 * Remove hot word ads in main search page
+* Disable WeChat jailbreak detection
 
 ## Known issues
 
