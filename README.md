@@ -16,4 +16,4 @@ The first tweak that removes almost all ads from wechat (except ads inside javas
 
 ## Known issues
 
-* The only ads remains in WeApps, I can't find the specific function for createing WeApp Ads for now.
+* The only ads remains in WeApps, I can't find the specific function that creates WeApp Ads for now.
